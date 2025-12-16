@@ -1,0 +1,31 @@
+# Dependencies
+/vendor/
+/docs/
+# Composer
+composer.lock
+
+# Environment / secrets
+.env
+.env.*
+
+# IDEs / Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PHPUnit / Tests
+.phpunit.result.cache
+coverage/
+.cache/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak

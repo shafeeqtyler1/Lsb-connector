@@ -1,0 +1,38 @@
+{
+    "name": "shafeeq/lsb-connector",
+    "description": "PHP SDK to connect with LSBX API - Framework agnostic",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "lsbx",
+        "banking",
+        "api",
+        "sdk",
+        "ach",
+        "transfers",
+        "fintech"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shafeeq\\LsbConnector\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Shafeeq",
+            "email": "shafeeqaklkt@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "ramsey/uuid": "^4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0|^10.0"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
