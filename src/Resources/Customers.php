@@ -22,7 +22,7 @@ class Customers extends AbstractResource
         CreatePersonCustomerRequest $request,
         ?string $idempotencyKey = null
     ): CreateCustomerResponse {
-        $response = $this->post(
+        $response = $this->httpPost(
             'customers',
             $request->toArray(),
             $this->withIdempotency($idempotencyKey)
@@ -40,7 +40,7 @@ class Customers extends AbstractResource
         CreateOrganizationCustomerRequest $request,
         ?string $idempotencyKey = null
     ): CreateCustomerResponse {
-        $response = $this->post(
+        $response = $this->httpPost(
             'customers',
             $request->toArray(),
             $this->withIdempotency($idempotencyKey)
@@ -56,7 +56,7 @@ class Customers extends AbstractResource
      */
     public function search(SearchCustomerRequest $request): ?Customer
     {
-        $response = $this->post('customers/search', $request->toArray());
+        $response = $this->httpPost('customers/search', $request->toArray());
         $data = $response->getData();
 
         if (empty($data) || !isset($data['customer_id'])) {
@@ -105,7 +105,7 @@ class Customers extends AbstractResource
      */
     public function update(string $customerId, UpdateCustomerRequest $request): array
     {
-        $response = $this->patch("customers/{$customerId}", $request->toArray());
+        $response = $this->httpPatch("customers/{$customerId}", $request->toArray());
         return $response->getData() ?? [];
     }
 }

@@ -235,7 +235,7 @@ $transaction = $client->accounts()->getTransaction($accountId, $transactionId);
 
 ### Entities (External Accounts)
 
-#### Create an Entity
+#### Create an Entity (Person)
 
 ```php
 use Shafeeq\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
@@ -250,6 +250,25 @@ $request = new CreateEntityRequest(
 
 $entity = $client->entities()->create($request);
 echo "Entity ID: " . $entity->id;
+```
+
+#### Create an Entity (Organization)
+
+```php
+use Shafeeq\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
+
+$request = new CreateEntityRequest(
+    accountNumber: '987654321',
+    routingNumber: '021000021',
+    accountHolderName: 'Acme Corp LLC',
+    accountType: CreateEntityRequest::ACCOUNT_TYPE_CHECKING,
+    description: 'Company operating account',
+    isOrganization: true
+);
+
+$entity = $client->entities()->create($request);
+echo "Entity ID: " . $entity->id;
+echo "Is Organization: " . ($entity->isOrganization ? 'Yes' : 'No');
 ```
 
 #### List and Search Entities

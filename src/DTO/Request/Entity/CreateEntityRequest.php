@@ -16,6 +16,7 @@ class CreateEntityRequest
         public readonly string $accountType = self::ACCOUNT_TYPE_CHECKING,
         public readonly ?string $description = null,
         public readonly ?string $customString = null,
+        public readonly bool $isOrganization = false,
     ) {}
 
     public function toArray(): array
@@ -29,6 +30,10 @@ class CreateEntityRequest
 
         if ($this->description !== null) {
             $data['description'] = $this->description;
+        }
+
+        if ($this->isOrganization) {
+            $data['is_organization'] = true;
         }
 
         // Generate custom_string if not provided (hash of account-routing)

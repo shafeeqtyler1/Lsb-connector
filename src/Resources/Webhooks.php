@@ -27,7 +27,7 @@ class Webhooks extends AbstractResource
      */
     public function create(CreateWebhookRequest $request): Webhook
     {
-        $response = $this->post('webhook/create', $request->toArray());
+        $response = $this->httpPost('webhook/create', $request->toArray());
         return Webhook::fromArray($response->getData() ?? []);
     }
 
@@ -80,7 +80,7 @@ class Webhooks extends AbstractResource
      */
     public function update(string $webhookId, UpdateWebhookRequest $request): Webhook
     {
-        $response = $this->patch("webhook/{$webhookId}", $request->toArray());
+        $response = $this->httpPatch("webhook/{$webhookId}", $request->toArray());
         return Webhook::fromArray($response->getData() ?? []);
     }
 

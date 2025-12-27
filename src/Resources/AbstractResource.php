@@ -37,7 +37,7 @@ abstract class AbstractResource
     /**
      * Send GET request
      */
-    protected function get(string $endpoint, array $query = [], array $headers = []): Response
+    protected function httpGet(string $endpoint, array $query = [], array $headers = []): Response
     {
         return $this->httpClient->get($endpoint, $query, $headers);
     }
@@ -45,7 +45,7 @@ abstract class AbstractResource
     /**
      * Send POST request
      */
-    protected function post(string $endpoint, ?array $data = null, array $headers = []): Response
+    protected function httpPost(string $endpoint, ?array $data = null, array $headers = []): Response
     {
         return $this->httpClient->post($endpoint, $data, $headers);
     }
@@ -53,7 +53,7 @@ abstract class AbstractResource
     /**
      * Send PATCH request
      */
-    protected function patch(string $endpoint, ?array $data = null, array $headers = []): Response
+    protected function httpPatch(string $endpoint, ?array $data = null, array $headers = []): Response
     {
         return $this->httpClient->patch($endpoint, $data, $headers);
     }
@@ -61,7 +61,7 @@ abstract class AbstractResource
     /**
      * Send DELETE request
      */
-    protected function delete(string $endpoint, ?array $data = null, array $headers = []): Response
+    protected function httpDelete(string $endpoint, ?array $data = null, array $headers = []): Response
     {
         return $this->httpClient->delete($endpoint, $data, $headers);
     }

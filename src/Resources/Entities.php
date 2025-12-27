@@ -20,7 +20,7 @@ class Entities extends AbstractResource
         CreateEntityRequest $request,
         ?string $idempotencyKey = null
     ): Entity {
-        $response = $this->post(
+        $response = $this->httpPost(
             'entities',
             $request->toArray(),
             $this->withIdempotency($idempotencyKey)
@@ -74,7 +74,7 @@ class Entities extends AbstractResource
         int $pageNumber = 0,
         int $recordsPerPage = 10
     ): array {
-        $response = $this->post('entities/search', $request->toArray());
+        $response = $this->httpPost('entities/search', $request->toArray());
 
         $data = $response->getData() ?? [];
 
@@ -119,7 +119,7 @@ class Entities extends AbstractResource
      */
     public function update(string $entityId, UpdateEntityRequest $request): Entity
     {
-        $response = $this->patch("entities/{$entityId}", $request->toArray());
+        $response = $this->httpPatch("entities/{$entityId}", $request->toArray());
         return Entity::fromArray($response->getData() ?? []);
     }
 

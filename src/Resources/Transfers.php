@@ -21,7 +21,7 @@ class Transfers extends AbstractResource
         CreateAchTransferRequest $request,
         ?string $idempotencyKey = null
     ): Transfer {
-        $response = $this->post(
+        $response = $this->httpPost(
             'transfers/ach',
             $request->toArray(),
             $this->withIdempotency($idempotencyKey)
@@ -100,7 +100,7 @@ class Transfers extends AbstractResource
         CancelAchTransferRequest $request,
         ?string $idempotencyKey = null
     ): bool {
-        $response = $this->delete(
+        $response = $this->httpDelete(
             'transfers/ach',
             $request->toArray(),
             $this->withIdempotency($idempotencyKey)
@@ -132,7 +132,7 @@ class Transfers extends AbstractResource
         CreateBookTransferRequest $request,
         ?string $idempotencyKey = null
     ): Transfer {
-        $response = $this->post(
+        $response = $this->httpPost(
             'transfers/book',
             $request->toArray(),
             $this->withIdempotency($idempotencyKey)
@@ -166,7 +166,7 @@ class Transfers extends AbstractResource
         CreateWireTransferRequest $request,
         ?string $idempotencyKey = null
     ): Transfer {
-        $response = $this->post(
+        $response = $this->httpPost(
             'transfers/wire',
             $request->toArray(),
             $this->withIdempotency($idempotencyKey)

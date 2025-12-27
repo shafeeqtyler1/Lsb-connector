@@ -20,7 +20,8 @@ class HttpClient
     private Config $config;
     private CacheInterface $cache;
     private ?string $accessToken = null;
-    private ?callable $logger = null;
+    /** @var callable|null */
+    private $logger = null;
 
     public function __construct(Config $config, ?CacheInterface $cache = null)
     {

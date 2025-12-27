@@ -27,7 +27,7 @@ class Accounts extends AbstractResource
         CreateAccountRequest $request,
         ?string $idempotencyKey = null
     ): CreateAccountResponse {
-        $response = $this->post(
+        $response = $this->httpPost(
             'accounts',
             $request->toArray(),
             $this->withIdempotency($idempotencyKey)
@@ -65,7 +65,7 @@ class Accounts extends AbstractResource
      */
     public function update(string $accountId, UpdateAccountRequest $request): array
     {
-        $response = $this->patch("accounts/{$accountId}", $request->toArray());
+        $response = $this->httpPatch("accounts/{$accountId}", $request->toArray());
         return $response->getData() ?? [];
     }
 
@@ -76,7 +76,7 @@ class Accounts extends AbstractResource
      */
     public function freeze(string $accountId, FreezeAccountRequest $request): array
     {
-        $response = $this->post("accounts/{$accountId}/freeze", $request->toArray());
+        $response = $this->httpPost("accounts/{$accountId}/freeze", $request->toArray());
         return $response->getData() ?? [];
     }
 
@@ -114,7 +114,7 @@ class Accounts extends AbstractResource
      */
     public function createLimits(string $accountId, CreateLimitsRequest $request): AccountLimits
     {
-        $response = $this->post("accounts/limits/{$accountId}", $request->toArray());
+        $response = $this->httpPost("accounts/limits/{$accountId}", $request->toArray());
         return AccountLimits::fromArray($response->getData() ?? []);
     }
 
@@ -125,7 +125,7 @@ class Accounts extends AbstractResource
      */
     public function updateLimits(string $accountId, UpdateLimitsRequest $request): AccountLimits
     {
-        $response = $this->patch("accounts/limits/{$accountId}", $request->toArray());
+        $response = $this->httpPatch("accounts/limits/{$accountId}", $request->toArray());
         return AccountLimits::fromArray($response->getData() ?? []);
     }
 
@@ -136,7 +136,7 @@ class Accounts extends AbstractResource
      */
     public function deleteLimits(string $accountId): bool
     {
-        $response = $this->delete("accounts/limits/{$accountId}");
+        $response = $this->httpDelete("accounts/limits/{$accountId}");
         return $response->isSuccessful();
     }
 

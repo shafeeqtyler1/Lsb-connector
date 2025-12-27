@@ -17,6 +17,11 @@
             "Shafeeq\\LsbConnector\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Shafeeq\\LsbConnector\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Shafeeq",
