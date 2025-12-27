@@ -60,7 +60,8 @@ class CreateAchTransferRequest
         string $entityId,
         float $amount,
         string $description,
-        bool $sameDayAch = false
+        bool $sameDayAch = false,
+        ?string $externalDescription = null
     ): self {
         return new self(
             accountId: $accountId,
@@ -68,7 +69,8 @@ class CreateAchTransferRequest
             type: self::TYPE_DEBIT,
             amount: $amount,
             description: $description,
-            sameDayAch: $sameDayAch
+            sameDayAch: $sameDayAch,
+            externalDescription: $externalDescription
         );
     }
 
@@ -77,7 +79,8 @@ class CreateAchTransferRequest
         string $entityId,
         float $amount,
         string $description,
-        bool $sameDayAch = false
+        bool $sameDayAch = false,
+        ?string $externalDescription = null
     ): self {
         return new self(
             accountId: $accountId,
@@ -85,7 +88,8 @@ class CreateAchTransferRequest
             type: self::TYPE_CREDIT,
             amount: $amount,
             description: $description,
-            sameDayAch: $sameDayAch
+            sameDayAch: $sameDayAch,
+            externalDescription: $externalDescription
         );
     }
 }

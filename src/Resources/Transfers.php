@@ -32,6 +32,14 @@ class Transfers extends AbstractResource
 
     /**
      * Create an ACH debit transfer (pull funds from external account)
+     *
+     * @param string $accountId Internal account ID
+     * @param string $entityId External entity ID
+     * @param float $amount Transfer amount
+     * @param string $description Internal description (max 100 chars)
+     * @param bool $sameDayAch Use same-day ACH processing
+     * @param string|null $externalDescription Description for bank statement (max 32 chars)
+     * @param string|null $idempotencyKey Unique key for safe retries
      */
     public function debit(
         string $accountId,
@@ -39,6 +47,7 @@ class Transfers extends AbstractResource
         float $amount,
         string $description,
         bool $sameDayAch = false,
+        ?string $externalDescription = null,
         ?string $idempotencyKey = null
     ): Transfer {
         $request = CreateAchTransferRequest::debit(
@@ -46,7 +55,8 @@ class Transfers extends AbstractResource
             $entityId,
             $amount,
             $description,
-            $sameDayAch
+            $sameDayAch,
+            $externalDescription
         );
 
         return $this->createAch($request, $idempotencyKey);
@@ -54,6 +64,14 @@ class Transfers extends AbstractResource
 
     /**
      * Create an ACH credit transfer (push funds to external account)
+     *
+     * @param string $accountId Internal account ID
+     * @param string $entityId External entity ID
+     * @param float $amount Transfer amount
+     * @param string $description Internal description (max 100 chars)
+     * @param bool $sameDayAch Use same-day ACH processing
+     * @param string|null $externalDescription Description for bank statement (max 32 chars)
+     * @param string|null $idempotencyKey Unique key for safe retries
      */
     public function credit(
         string $accountId,
@@ -61,6 +79,7 @@ class Transfers extends AbstractResource
         float $amount,
         string $description,
         bool $sameDayAch = false,
+        ?string $externalDescription = null,
         ?string $idempotencyKey = null
     ): Transfer {
         $request = CreateAchTransferRequest::credit(
@@ -68,7 +87,8 @@ class Transfers extends AbstractResource
             $entityId,
             $amount,
             $description,
-            $sameDayAch
+            $sameDayAch,
+            $externalDescription
         );
 
         return $this->createAch($request, $idempotencyKey);

@@ -308,21 +308,30 @@ $request = new CreateAchTransferRequest(
     entityId: $entityId,
     type: CreateAchTransferRequest::TYPE_DEBIT,
     amount: 100.00,
-    description: 'Payment description',
+    description: 'Payment description',         // Internal description (max 100 chars)
     sameDayAch: true,
-    externalDescription: 'Bank statement desc'
+    externalDescription: 'Bank statement desc'  // Appears on bank statement (max 32 chars)
 );
 $transfer = $client->transfers()->createAch($request);
 
 // Convenience methods
 // Pull funds from external account (DEBIT)
 $transfer = $client->transfers()->debit(
-    $accountId, $entityId, 100.00, 'Pull payment', sameDayAch: true
+    accountId: $accountId,
+    entityId: $entityId,
+    amount: 100.00,
+    description: 'Pull payment',
+    sameDayAch: true,
+    externalDescription: 'ACME Payment'         // Optional: bank statement description
 );
 
 // Push funds to external account (CREDIT)
 $transfer = $client->transfers()->credit(
-    $accountId, $entityId, 100.00, 'Payment to vendor'
+    accountId: $accountId,
+    entityId: $entityId,
+    amount: 100.00,
+    description: 'Payment to vendor',
+    externalDescription: 'Vendor Pmt 12345'
 );
 
 // Get pending ACH transfers
@@ -352,19 +361,38 @@ $transfer = $client->transfers()->internalTransfer(
 use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
 use Shafeeq\LsbConnector\DTO\Common\Address;
 
-$request = new CreateWireTransferRequest(
+// Wire to an individual (use first_name + last_name)
+$request = CreateWireTransferRequest::toIndividual(
     accountId: $accountId,
     entityId: $entityId,
     amount: 10000.00,
-    description: 'Wire payment',
     effectiveDate: '2024-12-15',
-    recipientName: 'John Doe',
+    firstName: 'John',
+    lastName: 'Doe',
     recipientAddress: new Address(
         street: '123 Main St',
         city: 'New York',
         state: 'NY',
         postalCode: '10001'
-    )
+    ),
+    description: 'Wire payment',
+    externalDescription: 'Wire Pmt 12345'    // Max 120 chars
+);
+
+// Wire to a business (use business name only)
+$businessRequest = CreateWireTransferRequest::toBusiness(
+    accountId: $accountId,
+    entityId: $entityId,
+    amount: 50000.00,
+    effectiveDate: '2024-12-15',
+    businessName: 'Acme Corporation LLC',
+    recipientAddress: new Address(
+        street: '456 Business Ave',
+        city: 'Los Angeles',
+        state: 'CA',
+        postalCode: '90001'
+    ),
+    description: 'Vendor payment'
 );
 
 $transfer = $client->transfers()->createWire($request);

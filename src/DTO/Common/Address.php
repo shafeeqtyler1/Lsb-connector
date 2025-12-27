@@ -29,6 +29,24 @@ class Address
         ], fn($value) => $value !== null);
     }
 
+    /**
+     * Convert to wire transfer address format
+     * Wire transfers use street_line_1 instead of street
+     */
+    public function toWireArray(): array
+    {
+        $data = [
+            'street_line_1' => $this->street,
+            'street_line_2' => $this->streetLine2,
+            'city' => $this->city,
+            'postal_code' => $this->postalCode,
+            'state' => $this->state,
+        ];
+
+        // Include nulls for wire format
+        return $data;
+    }
+
     public static function fromArray(array $data): self
     {
         return new self(

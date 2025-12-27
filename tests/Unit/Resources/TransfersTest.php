@@ -190,19 +190,22 @@ class TransfersTest extends TestCase
             'type' => 'WIRE',
         ]));
 
-        $request = new CreateWireTransferRequest(
+        // Test wire to individual using factory method
+        $request = CreateWireTransferRequest::toIndividual(
             accountId: 'acc_123',
             entityId: 'ent_456',
             amount: 10000.00,
-            description: 'Wire Payment',
             effectiveDate: '2024-12-15',
-            recipientName: 'John Doe',
+            firstName: 'John',
+            lastName: 'Doe',
             recipientAddress: new Address(
                 street: '123 Main St',
                 city: 'New York',
                 state: 'NY',
                 postalCode: '10001'
-            )
+            ),
+            description: 'Wire Payment',
+            externalDescription: 'Wire Pmt'
         );
         $transfer = $this->transfers->createWire($request);
 
@@ -211,9 +214,53 @@ class TransfersTest extends TestCase
         $lastRequest = $this->httpClient->getLastRequest();
         $this->assertEquals('POST', $lastRequest['method']);
         $this->assertEquals('transfers/wire', $lastRequest['endpoint']);
-        $this->assertEquals(10000.00, $lastRequest['data']['amount']);
-        $this->assertEquals('John Doe', $lastRequest['data']['recipient_name']);
-        $this->assertArrayHasKey('recipient_address', $lastRequest['data']);
+        $this->assertEquals('DOMESTIC', $lastRequest['data']['type']);
+        $this->assertArrayHasKey('wire_details', $lastRequest['data']);
+        $this->assertEquals(10000.00, $lastRequest['data']['wire_details']['amount']);
+        $this->assertEquals('acc_123', $lastRequest['data']['wire_details']['account_id']);
+        $this->assertEquals('ent_456', $lastRequest['data']['wire_details']['entity_id']);
+        $this->assertEquals('Wire Payment', $lastRequest['data']['wire_details']['description']);
+        $this->assertEquals('Wire Pmt', $lastRequest['data']['wire_details']['external_description']);
+        $this->assertFalse($lastRequest['data']['wire_details']['fbo_account_override']);
+        $this->assertArrayHasKey('recipient_details', $lastRequest['data']['wire_details']);
+        // Individual: first_name and last_name (no 'name')
+        $this->assertArrayNotHasKey('name', $lastRequest['data']['wire_details']['recipient_details']);
+        $this->assertEquals('John', $lastRequest['data']['wire_details']['recipient_details']['first_name']);
+        $this->assertEquals('Doe', $lastRequest['data']['wire_details']['recipient_details']['last_name']);
+        $this->assertArrayHasKey('address', $lastRequest['data']['wire_details']['recipient_details']);
+        $this->assertEquals('123 Main St', $lastRequest['data']['wire_details']['recipient_details']['address']['street_line_1']);
+    }
+
+    public function test_create_wire_transfer_to_business(): void
+    {
+        $this->httpClient->addMockResponse(200, TestDataFactory::transferResponse([
+            'type' => 'WIRE',
+        ]));
+
+        $request = CreateWireTransferRequest::toBusiness(
+            accountId: 'acc_123',
+            entityId: 'ent_456',
+            amount: 50000.00,
+            effectiveDate: '2024-12-15',
+            businessName: 'Acme Corporation',
+            recipientAddress: new Address(
+                street: '456 Business Ave',
+                city: 'Los Angeles',
+                state: 'CA',
+                postalCode: '90001'
+            ),
+            description: 'Business Wire Payment'
+        );
+        $transfer = $this->transfers->createWire($request);
+
+        $this->assertInstanceOf(Transfer::class, $transfer);
+
+        $lastRequest = $this->httpClient->getLastRequest();
+        $this->assertEquals('DOMESTIC', $lastRequest['data']['type']);
+        // Business: name only (no first_name/last_name)
+        $this->assertEquals('Acme Corporation', $lastRequest['data']['wire_details']['recipient_details']['name']);
+        $this->assertArrayNotHasKey('first_name', $lastRequest['data']['wire_details']['recipient_details']);
+        $this->assertArrayNotHasKey('last_name', $lastRequest['data']['wire_details']['recipient_details']);
     }
 
     public function test_get_pending_wire_transfers(): void
