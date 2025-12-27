@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\DTO\Request\Entity;
+namespace ShafeeqKt\LsbConnector\DTO\Request\Entity;
 
 class SearchEntityRequest
 {

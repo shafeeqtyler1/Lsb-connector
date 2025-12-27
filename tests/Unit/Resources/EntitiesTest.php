@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Unit\Resources;
+namespace ShafeeqKt\LsbConnector\Tests\Unit\Resources;
 
-use Shafeeq\LsbConnector\Tests\TestCase;
-use Shafeeq\LsbConnector\Tests\Helpers\MockHttpClient;
-use Shafeeq\LsbConnector\Tests\Helpers\TestDataFactory;
-use Shafeeq\LsbConnector\Resources\Entities;
-use Shafeeq\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
-use Shafeeq\LsbConnector\DTO\Request\Entity\UpdateEntityRequest;
-use Shafeeq\LsbConnector\DTO\Request\Entity\SearchEntityRequest;
-use Shafeeq\LsbConnector\DTO\Response\Entity;
+use ShafeeqKt\LsbConnector\Tests\TestCase;
+use ShafeeqKt\LsbConnector\Tests\Helpers\MockHttpClient;
+use ShafeeqKt\LsbConnector\Tests\Helpers\TestDataFactory;
+use ShafeeqKt\LsbConnector\Resources\Entities;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\UpdateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\SearchEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Response\Entity;
 
 class EntitiesTest extends TestCase
 {

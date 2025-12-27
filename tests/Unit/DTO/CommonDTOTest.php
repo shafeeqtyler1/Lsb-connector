@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Unit\DTO;
+namespace ShafeeqKt\LsbConnector\Tests\Unit\DTO;
 
-use Shafeeq\LsbConnector\Tests\TestCase;
-use Shafeeq\LsbConnector\DTO\Common\Address;
-use Shafeeq\LsbConnector\DTO\Common\Phone;
-use Shafeeq\LsbConnector\DTO\Common\Identification;
-use Shafeeq\LsbConnector\DTO\Common\CddQuestion;
-use Shafeeq\LsbConnector\DTO\Common\PersonDetails;
-use Shafeeq\LsbConnector\DTO\Common\OrganizationDetails;
+use ShafeeqKt\LsbConnector\Tests\TestCase;
+use ShafeeqKt\LsbConnector\DTO\Common\Address;
+use ShafeeqKt\LsbConnector\DTO\Common\Phone;
+use ShafeeqKt\LsbConnector\DTO\Common\Identification;
+use ShafeeqKt\LsbConnector\DTO\Common\CddQuestion;
+use ShafeeqKt\LsbConnector\DTO\Common\PersonDetails;
+use ShafeeqKt\LsbConnector\DTO\Common\OrganizationDetails;
 
 class CommonDTOTest extends TestCase
 {

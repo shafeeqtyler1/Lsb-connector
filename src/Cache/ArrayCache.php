@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Cache;
+namespace ShafeeqKt\LsbConnector\Cache;
 
 /**
  * In-memory cache implementation (useful for testing or single-request scenarios)

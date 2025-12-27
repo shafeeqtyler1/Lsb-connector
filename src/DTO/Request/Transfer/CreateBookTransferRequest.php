@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\DTO\Request\Transfer;
+namespace ShafeeqKt\LsbConnector\DTO\Request\Transfer;
 
 class CreateBookTransferRequest
 {

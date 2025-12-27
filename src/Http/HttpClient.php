@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Http;
+namespace ShafeeqKt\LsbConnector\Http;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
-use Shafeeq\LsbConnector\Config;
-use Shafeeq\LsbConnector\Cache\CacheInterface;
-use Shafeeq\LsbConnector\Cache\FileCache;
-use Shafeeq\LsbConnector\Exceptions\ApiException;
-use Shafeeq\LsbConnector\Exceptions\AuthenticationException;
-use Shafeeq\LsbConnector\Exceptions\LsbxException;
+use ShafeeqKt\LsbConnector\Config;
+use ShafeeqKt\LsbConnector\Cache\CacheInterface;
+use ShafeeqKt\LsbConnector\Cache\FileCache;
+use ShafeeqKt\LsbConnector\Exceptions\ApiException;
+use ShafeeqKt\LsbConnector\Exceptions\AuthenticationException;
+use ShafeeqKt\LsbConnector\Exceptions\LsbxException;
 use Ramsey\Uuid\Uuid;
 
 class HttpClient

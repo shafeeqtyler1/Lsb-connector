@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\DTO\Request\Transfer;
+namespace ShafeeqKt\LsbConnector\DTO\Request\Transfer;
 
-use Shafeeq\LsbConnector\DTO\Common\Address;
+use ShafeeqKt\LsbConnector\DTO\Common\Address;
 
 class CreateWireTransferRequest
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\DTO\Request\Customer;
+namespace ShafeeqKt\LsbConnector\DTO\Request\Customer;
 
 class SearchCustomerRequest
 {

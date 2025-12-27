@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\DTO\Response;
+namespace ShafeeqKt\LsbConnector\DTO\Response;
 
 class Transfer
 {

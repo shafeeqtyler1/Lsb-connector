@@ -10,11 +10,11 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Shafeeq\LsbConnector\LsbxClient;
-use Shafeeq\LsbConnector\DTO\Request\Webhook\CreateWebhookRequest;
-use Shafeeq\LsbConnector\DTO\Request\Webhook\UpdateWebhookRequest;
-use Shafeeq\LsbConnector\Resources\Webhooks;
-use Shafeeq\LsbConnector\Exceptions\LsbxException;
+use ShafeeqKt\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\DTO\Request\Webhook\CreateWebhookRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Webhook\UpdateWebhookRequest;
+use ShafeeqKt\LsbConnector\Resources\Webhooks;
+use ShafeeqKt\LsbConnector\Exceptions\LsbxException;
 
 // Initialize client
 $client = LsbxClient::sandbox('your_client_id', 'your_client_secret');
@@ -148,7 +148,7 @@ echo "Copy this code to your webhook endpoint (e.g., /api/webhooks/lsbx):\n\n";
 $handlerCode = <<<'PHP'
 <?php
 
-use Shafeeq\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\LsbxClient;
 
 // Initialize client
 $client = LsbxClient::sandbox('your_client_id', 'your_client_secret');

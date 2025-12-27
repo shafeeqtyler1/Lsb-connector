@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Unit\Resources;
+namespace ShafeeqKt\LsbConnector\Tests\Unit\Resources;
 
-use Shafeeq\LsbConnector\Tests\TestCase;
-use Shafeeq\LsbConnector\Tests\Helpers\MockHttpClient;
-use Shafeeq\LsbConnector\Tests\Helpers\TestDataFactory;
-use Shafeeq\LsbConnector\Resources\Webhooks;
-use Shafeeq\LsbConnector\DTO\Request\Webhook\CreateWebhookRequest;
-use Shafeeq\LsbConnector\DTO\Request\Webhook\UpdateWebhookRequest;
-use Shafeeq\LsbConnector\DTO\Response\Webhook;
-use Shafeeq\LsbConnector\DTO\Response\WebhookEvent;
+use ShafeeqKt\LsbConnector\Tests\TestCase;
+use ShafeeqKt\LsbConnector\Tests\Helpers\MockHttpClient;
+use ShafeeqKt\LsbConnector\Tests\Helpers\TestDataFactory;
+use ShafeeqKt\LsbConnector\Resources\Webhooks;
+use ShafeeqKt\LsbConnector\DTO\Request\Webhook\CreateWebhookRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Webhook\UpdateWebhookRequest;
+use ShafeeqKt\LsbConnector\DTO\Response\Webhook;
+use ShafeeqKt\LsbConnector\DTO\Response\WebhookEvent;
 
 class WebhooksTest extends TestCase
 {

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Unit\Resources;
+namespace ShafeeqKt\LsbConnector\Tests\Unit\Resources;
 
-use Shafeeq\LsbConnector\Tests\TestCase;
-use Shafeeq\LsbConnector\Tests\Helpers\MockHttpClient;
-use Shafeeq\LsbConnector\Tests\Helpers\TestDataFactory;
-use Shafeeq\LsbConnector\Resources\Customers;
-use Shafeeq\LsbConnector\DTO\Request\Customer\SearchCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Request\Customer\UpdateCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Response\CreateCustomerResponse;
-use Shafeeq\LsbConnector\DTO\Response\Customer;
+use ShafeeqKt\LsbConnector\Tests\TestCase;
+use ShafeeqKt\LsbConnector\Tests\Helpers\MockHttpClient;
+use ShafeeqKt\LsbConnector\Tests\Helpers\TestDataFactory;
+use ShafeeqKt\LsbConnector\Resources\Customers;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\SearchCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\UpdateCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Response\CreateCustomerResponse;
+use ShafeeqKt\LsbConnector\DTO\Response\Customer;
 
 class CustomersTest extends TestCase
 {

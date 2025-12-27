@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Helpers;
+namespace ShafeeqKt\LsbConnector\Tests\Helpers;
 
-use Shafeeq\LsbConnector\Http\HttpClient;
-use Shafeeq\LsbConnector\Http\Response;
-use Shafeeq\LsbConnector\Config;
-use Shafeeq\LsbConnector\Cache\ArrayCache;
+use ShafeeqKt\LsbConnector\Http\HttpClient;
+use ShafeeqKt\LsbConnector\Http\Response;
+use ShafeeqKt\LsbConnector\Config;
+use ShafeeqKt\LsbConnector\Cache\ArrayCache;
 
 class MockHttpClient extends HttpClient
 {

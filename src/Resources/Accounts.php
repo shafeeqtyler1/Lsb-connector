@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Resources;
+namespace ShafeeqKt\LsbConnector\Resources;
 
-use Shafeeq\LsbConnector\DTO\Request\Account\CreateAccountRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\UpdateAccountRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\FreezeAccountRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\CreateLimitsRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\UpdateLimitsRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\GetTransactionsRequest;
-use Shafeeq\LsbConnector\DTO\Response\CreateAccountResponse;
-use Shafeeq\LsbConnector\DTO\Response\Account;
-use Shafeeq\LsbConnector\DTO\Response\AccountDetails;
-use Shafeeq\LsbConnector\DTO\Response\AccountLimits;
-use Shafeeq\LsbConnector\DTO\Response\Transaction;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\CreateAccountRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\UpdateAccountRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\FreezeAccountRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\CreateLimitsRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\UpdateLimitsRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\GetTransactionsRequest;
+use ShafeeqKt\LsbConnector\DTO\Response\CreateAccountResponse;
+use ShafeeqKt\LsbConnector\DTO\Response\Account;
+use ShafeeqKt\LsbConnector\DTO\Response\AccountDetails;
+use ShafeeqKt\LsbConnector\DTO\Response\AccountLimits;
+use ShafeeqKt\LsbConnector\DTO\Response\Transaction;
 
 class Accounts extends AbstractResource
 {

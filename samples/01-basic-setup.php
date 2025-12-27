@@ -10,9 +10,9 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Shafeeq\LsbConnector\LsbxClient;
-use Shafeeq\LsbConnector\Exceptions\LsbxException;
-use Shafeeq\LsbConnector\Exceptions\AuthenticationException;
+use ShafeeqKt\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\Exceptions\LsbxException;
+use ShafeeqKt\LsbConnector\Exceptions\AuthenticationException;
 
 // =============================================================================
 // Method 1: Basic Initialization (Sandbox)
@@ -62,7 +62,7 @@ $clientWithOptions = new LsbxClient(
 // Method 4: With Custom Cache Implementation (e.g., Redis)
 // =============================================================================
 
-use Shafeeq\LsbConnector\Cache\CacheInterface;
+use ShafeeqKt\LsbConnector\Cache\CacheInterface;
 
 class RedisCache implements CacheInterface
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Resources;
+namespace ShafeeqKt\LsbConnector\Resources;
 
-use Shafeeq\LsbConnector\Http\HttpClient;
-use Shafeeq\LsbConnector\Http\Response;
+use ShafeeqKt\LsbConnector\Http\HttpClient;
+use ShafeeqKt\LsbConnector\Http\Response;
 
 abstract class AbstractResource
 {

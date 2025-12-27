@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Resources;
+namespace ShafeeqKt\LsbConnector\Resources;
 
-use Shafeeq\LsbConnector\DTO\Request\Webhook\CreateWebhookRequest;
-use Shafeeq\LsbConnector\DTO\Request\Webhook\UpdateWebhookRequest;
-use Shafeeq\LsbConnector\DTO\Response\Webhook;
-use Shafeeq\LsbConnector\DTO\Response\WebhookEvent;
+use ShafeeqKt\LsbConnector\DTO\Request\Webhook\CreateWebhookRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Webhook\UpdateWebhookRequest;
+use ShafeeqKt\LsbConnector\DTO\Response\Webhook;
+use ShafeeqKt\LsbConnector\DTO\Response\WebhookEvent;
 
 class Webhooks extends AbstractResource
 {

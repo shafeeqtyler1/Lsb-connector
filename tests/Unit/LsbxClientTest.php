@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Unit;
+namespace ShafeeqKt\LsbConnector\Tests\Unit;
 
-use Shafeeq\LsbConnector\Tests\TestCase;
-use Shafeeq\LsbConnector\LsbxClient;
-use Shafeeq\LsbConnector\Config;
-use Shafeeq\LsbConnector\Resources\Customers;
-use Shafeeq\LsbConnector\Resources\Accounts;
-use Shafeeq\LsbConnector\Resources\Entities;
-use Shafeeq\LsbConnector\Resources\Transfers;
-use Shafeeq\LsbConnector\Resources\Webhooks;
-use Shafeeq\LsbConnector\Exceptions\ConfigurationException;
+use ShafeeqKt\LsbConnector\Tests\TestCase;
+use ShafeeqKt\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\Config;
+use ShafeeqKt\LsbConnector\Resources\Customers;
+use ShafeeqKt\LsbConnector\Resources\Accounts;
+use ShafeeqKt\LsbConnector\Resources\Entities;
+use ShafeeqKt\LsbConnector\Resources\Transfers;
+use ShafeeqKt\LsbConnector\Resources\Webhooks;
+use ShafeeqKt\LsbConnector\Exceptions\ConfigurationException;
 
 class LsbxClientTest extends TestCase
 {

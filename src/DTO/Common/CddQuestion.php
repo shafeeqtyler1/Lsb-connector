@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\DTO\Common;
+namespace ShafeeqKt\LsbConnector\DTO\Common;
 
 class CddQuestion
 {

@@ -1,5 +1,5 @@
 {
-    "name": "shafeeq/lsb-connector",
+    "name": "shafeeq-kt/lsb-connector",
     "description": "PHP SDK to connect with LSBX API - Framework agnostic",
     "type": "library",
     "license": "MIT",
@@ -14,17 +14,17 @@
     ],
     "autoload": {
         "psr-4": {
-            "Shafeeq\\LsbConnector\\": "src/"
+            "ShafeeqKt\\LsbConnector\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Shafeeq\\LsbConnector\\Tests\\": "tests/"
+            "ShafeeqKt\\LsbConnector\\Tests\\": "tests/"
         }
     },
     "authors": [
         {
-            "name": "Shafeeq",
+            "name": "Shafeeq KT",
             "email": "shafeeqaklkt@gmail.com"
         }
     ],

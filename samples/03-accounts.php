@@ -10,13 +10,13 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Shafeeq\LsbConnector\LsbxClient;
-use Shafeeq\LsbConnector\DTO\Request\Account\CreateAccountRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\UpdateAccountRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\CreateLimitsRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\UpdateLimitsRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\GetTransactionsRequest;
-use Shafeeq\LsbConnector\Exceptions\LsbxException;
+use ShafeeqKt\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\CreateAccountRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\UpdateAccountRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\CreateLimitsRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\UpdateLimitsRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\GetTransactionsRequest;
+use ShafeeqKt\LsbConnector\Exceptions\LsbxException;
 
 // Initialize client
 $client = LsbxClient::sandbox('your_client_id', 'your_client_secret');

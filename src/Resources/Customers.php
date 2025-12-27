@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Resources;
+namespace ShafeeqKt\LsbConnector\Resources;
 
-use Shafeeq\LsbConnector\DTO\Request\Customer\CreatePersonCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Request\Customer\CreateOrganizationCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Request\Customer\SearchCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Request\Customer\UpdateCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Response\CreateCustomerResponse;
-use Shafeeq\LsbConnector\DTO\Response\Customer;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\CreatePersonCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\CreateOrganizationCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\SearchCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\UpdateCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Response\CreateCustomerResponse;
+use ShafeeqKt\LsbConnector\DTO\Response\Customer;
 
 class Customers extends AbstractResource
 {

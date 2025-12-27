@@ -10,17 +10,17 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Shafeeq\LsbConnector\LsbxClient;
-use Shafeeq\LsbConnector\DTO\Request\Customer\CreatePersonCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Request\Customer\CreateOrganizationCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Request\Customer\UpdateCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Common\PersonDetails;
-use Shafeeq\LsbConnector\DTO\Common\OrganizationDetails;
-use Shafeeq\LsbConnector\DTO\Common\Address;
-use Shafeeq\LsbConnector\DTO\Common\Phone;
-use Shafeeq\LsbConnector\DTO\Common\Identification;
-use Shafeeq\LsbConnector\DTO\Common\CddQuestion;
-use Shafeeq\LsbConnector\Exceptions\LsbxException;
+use ShafeeqKt\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\CreatePersonCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\CreateOrganizationCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\UpdateCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Common\PersonDetails;
+use ShafeeqKt\LsbConnector\DTO\Common\OrganizationDetails;
+use ShafeeqKt\LsbConnector\DTO\Common\Address;
+use ShafeeqKt\LsbConnector\DTO\Common\Phone;
+use ShafeeqKt\LsbConnector\DTO\Common\Identification;
+use ShafeeqKt\LsbConnector\DTO\Common\CddQuestion;
+use ShafeeqKt\LsbConnector\Exceptions\LsbxException;
 
 // Initialize client
 $client = LsbxClient::sandbox('your_client_id', 'your_client_secret');

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Http;
+namespace ShafeeqKt\LsbConnector\Http;
 
 class Response
 {

@@ -11,11 +11,11 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Shafeeq\LsbConnector\LsbxClient;
-use Shafeeq\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
-use Shafeeq\LsbConnector\DTO\Request\Entity\UpdateEntityRequest;
-use Shafeeq\LsbConnector\DTO\Request\Entity\SearchEntityRequest;
-use Shafeeq\LsbConnector\Exceptions\LsbxException;
+use ShafeeqKt\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\UpdateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\SearchEntityRequest;
+use ShafeeqKt\LsbConnector\Exceptions\LsbxException;
 
 // Initialize client
 $client = LsbxClient::sandbox('your_client_id', 'your_client_secret');

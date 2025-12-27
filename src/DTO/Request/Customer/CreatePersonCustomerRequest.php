@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\DTO\Request\Customer;
+namespace ShafeeqKt\LsbConnector\DTO\Request\Customer;
 
-use Shafeeq\LsbConnector\DTO\Common\PersonDetails;
-use Shafeeq\LsbConnector\DTO\Common\CddQuestion;
+use ShafeeqKt\LsbConnector\DTO\Common\PersonDetails;
+use ShafeeqKt\LsbConnector\DTO\Common\CddQuestion;
 
 class CreatePersonCustomerRequest
 {

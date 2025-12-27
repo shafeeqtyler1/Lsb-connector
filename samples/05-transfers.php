@@ -10,13 +10,13 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Shafeeq\LsbConnector\LsbxClient;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CancelAchTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
-use Shafeeq\LsbConnector\DTO\Common\Address;
-use Shafeeq\LsbConnector\Exceptions\LsbxException;
+use ShafeeqKt\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CancelAchTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Common\Address;
+use ShafeeqKt\LsbConnector\Exceptions\LsbxException;
 
 // Initialize client
 $client = LsbxClient::sandbox('your_client_id', 'your_client_secret');

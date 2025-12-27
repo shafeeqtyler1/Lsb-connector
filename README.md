@@ -10,13 +10,13 @@ A framework-agnostic PHP SDK for the LSBX Banking API.
 ## Installation
 
 ```bash
-composer require shafeeq/lsb-connector
+composer require shafeeq-kt/lsb-connector
 ```
 
 ## Quick Start
 
 ```php
-use Shafeeq\LsbConnector\LsbxClient;
+use ShafeeqKt\LsbConnector\LsbxClient;
 
 // Initialize the client (sandbox)
 $client = new LsbxClient(
@@ -54,12 +54,12 @@ $client = new LsbxClient(
 #### Create a Person Customer
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Customer\CreatePersonCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Common\PersonDetails;
-use Shafeeq\LsbConnector\DTO\Common\Address;
-use Shafeeq\LsbConnector\DTO\Common\Phone;
-use Shafeeq\LsbConnector\DTO\Common\Identification;
-use Shafeeq\LsbConnector\DTO\Common\CddQuestion;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\CreatePersonCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Common\PersonDetails;
+use ShafeeqKt\LsbConnector\DTO\Common\Address;
+use ShafeeqKt\LsbConnector\DTO\Common\Phone;
+use ShafeeqKt\LsbConnector\DTO\Common\Identification;
+use ShafeeqKt\LsbConnector\DTO\Common\CddQuestion;
 
 $personDetails = new PersonDetails(
     firstName: 'John',
@@ -97,8 +97,8 @@ echo "Customer ID: " . $response->customerId;
 #### Create an Organization Customer
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Customer\CreateOrganizationCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Common\OrganizationDetails;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\CreateOrganizationCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Common\OrganizationDetails;
 
 $orgDetails = new OrganizationDetails(
     name: 'Acme Corp LLC',
@@ -141,7 +141,7 @@ $customer = $client->customers()->findOrganizationByName('Acme Corp');
 #### Create an Account
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Account\CreateAccountRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\CreateAccountRequest;
 
 $request = new CreateAccountRequest(
     type: CreateAccountRequest::TYPE_PERSON,
@@ -188,8 +188,8 @@ $client->accounts()->unfreezeAccount($accountId);
 #### Account Limits
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Account\CreateLimitsRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\UpdateLimitsRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\CreateLimitsRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\UpdateLimitsRequest;
 
 // Create limits
 $limits = $client->accounts()->createLimits($accountId, new CreateLimitsRequest(
@@ -214,7 +214,7 @@ $client->accounts()->deleteLimits($accountId);
 #### Get Transactions
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Account\GetTransactionsRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\GetTransactionsRequest;
 
 // Get transactions for date range
 $transactions = $client->accounts()->getTransactions(
@@ -238,7 +238,7 @@ $transaction = $client->accounts()->getTransaction($accountId, $transactionId);
 #### Create an Entity (Person)
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
 
 $request = new CreateEntityRequest(
     accountNumber: '123456789',
@@ -255,7 +255,7 @@ echo "Entity ID: " . $entity->id;
 #### Create an Entity (Organization)
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
 
 $request = new CreateEntityRequest(
     accountNumber: '987654321',
@@ -284,7 +284,7 @@ $entity = $client->entities()->findByAccountAndRouting('123456789', '021000021')
 #### Update and Delete Entities
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Entity\UpdateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\UpdateEntityRequest;
 
 // Update
 $entity = $client->entities()->update($entityId, new UpdateEntityRequest(
@@ -300,7 +300,7 @@ $client->entities()->delete($entityId);
 #### ACH Transfers
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
 
 // Create ACH transfer with full control
 $request = new CreateAchTransferRequest(
@@ -344,7 +344,7 @@ $client->transfers()->cancelAchById($transferId, $accountId);
 #### Book Transfers (Internal)
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
 
 // Transfer between internal accounts
 $transfer = $client->transfers()->internalTransfer(
@@ -358,8 +358,8 @@ $transfer = $client->transfers()->internalTransfer(
 #### Wire Transfers (Sandbox Only)
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
-use Shafeeq\LsbConnector\DTO\Common\Address;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Common\Address;
 
 // Wire to an individual (use first_name + last_name)
 $request = CreateWireTransferRequest::toIndividual(
@@ -406,8 +406,8 @@ $pending = $client->transfers()->getPendingWire($accountId);
 #### Manage Webhooks
 
 ```php
-use Shafeeq\LsbConnector\DTO\Request\Webhook\CreateWebhookRequest;
-use Shafeeq\LsbConnector\Resources\Webhooks;
+use ShafeeqKt\LsbConnector\DTO\Request\Webhook\CreateWebhookRequest;
+use ShafeeqKt\LsbConnector\Resources\Webhooks;
 
 // Create webhook
 $webhook = $client->webhooks()->create(new CreateWebhookRequest(
@@ -462,10 +462,10 @@ foreach ($events as $event) {
 ## Error Handling
 
 ```php
-use Shafeeq\LsbConnector\Exceptions\LsbxException;
-use Shafeeq\LsbConnector\Exceptions\AuthenticationException;
-use Shafeeq\LsbConnector\Exceptions\ApiException;
-use Shafeeq\LsbConnector\Exceptions\ValidationException;
+use ShafeeqKt\LsbConnector\Exceptions\LsbxException;
+use ShafeeqKt\LsbConnector\Exceptions\AuthenticationException;
+use ShafeeqKt\LsbConnector\Exceptions\ApiException;
+use ShafeeqKt\LsbConnector\Exceptions\ValidationException;
 
 try {
     $customer = $client->customers()->createPerson($request);
@@ -489,7 +489,7 @@ try {
 ## Custom Cache Implementation
 
 ```php
-use Shafeeq\LsbConnector\Cache\CacheInterface;
+use ShafeeqKt\LsbConnector\Cache\CacheInterface;
 
 class RedisCache implements CacheInterface
 {

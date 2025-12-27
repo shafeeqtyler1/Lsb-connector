@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\DTO\Request\Account;
+namespace ShafeeqKt\LsbConnector\DTO\Request\Account;
 
 class CreateLimitsRequest
 {

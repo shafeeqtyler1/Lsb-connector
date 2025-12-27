@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Resources;
+namespace ShafeeqKt\LsbConnector\Resources;
 
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CancelAchTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
-use Shafeeq\LsbConnector\DTO\Response\Transfer;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CancelAchTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Response\Transfer;
 
 class Transfers extends AbstractResource
 {

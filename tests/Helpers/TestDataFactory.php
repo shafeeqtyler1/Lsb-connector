@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Helpers;
+namespace ShafeeqKt\LsbConnector\Tests\Helpers;
 
-use Shafeeq\LsbConnector\DTO\Common\Address;
-use Shafeeq\LsbConnector\DTO\Common\Phone;
-use Shafeeq\LsbConnector\DTO\Common\Identification;
-use Shafeeq\LsbConnector\DTO\Common\PersonDetails;
-use Shafeeq\LsbConnector\DTO\Common\OrganizationDetails;
-use Shafeeq\LsbConnector\DTO\Common\CddQuestion;
-use Shafeeq\LsbConnector\DTO\Request\Customer\CreatePersonCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Request\Customer\CreateOrganizationCustomerRequest;
-use Shafeeq\LsbConnector\DTO\Request\Account\CreateAccountRequest;
-use Shafeeq\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Common\Address;
+use ShafeeqKt\LsbConnector\DTO\Common\Phone;
+use ShafeeqKt\LsbConnector\DTO\Common\Identification;
+use ShafeeqKt\LsbConnector\DTO\Common\PersonDetails;
+use ShafeeqKt\LsbConnector\DTO\Common\OrganizationDetails;
+use ShafeeqKt\LsbConnector\DTO\Common\CddQuestion;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\CreatePersonCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Customer\CreateOrganizationCustomerRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Account\CreateAccountRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
 
 class TestDataFactory
 {

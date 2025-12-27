@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Cache;
+namespace ShafeeqKt\LsbConnector\Cache;
 
-use Shafeeq\LsbConnector\Exceptions\ConfigurationException;
+use ShafeeqKt\LsbConnector\Exceptions\ConfigurationException;
 
 class FileCache implements CacheInterface
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests;
+namespace ShafeeqKt\LsbConnector\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Exceptions;
+namespace ShafeeqKt\LsbConnector\Exceptions;
 
 use Exception;
 

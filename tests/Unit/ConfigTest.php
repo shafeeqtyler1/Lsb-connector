@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Unit;
+namespace ShafeeqKt\LsbConnector\Tests\Unit;
 
-use Shafeeq\LsbConnector\Tests\TestCase;
-use Shafeeq\LsbConnector\Config;
+use ShafeeqKt\LsbConnector\Tests\TestCase;
+use ShafeeqKt\LsbConnector\Config;
 
 class ConfigTest extends TestCase
 {

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector;
+namespace ShafeeqKt\LsbConnector;
 
-use Shafeeq\LsbConnector\Cache\CacheInterface;
-use Shafeeq\LsbConnector\Cache\FileCache;
-use Shafeeq\LsbConnector\Http\HttpClient;
-use Shafeeq\LsbConnector\Resources\Customers;
-use Shafeeq\LsbConnector\Resources\Accounts;
-use Shafeeq\LsbConnector\Resources\Entities;
-use Shafeeq\LsbConnector\Resources\Transfers;
-use Shafeeq\LsbConnector\Resources\Webhooks;
-use Shafeeq\LsbConnector\Exceptions\ConfigurationException;
+use ShafeeqKt\LsbConnector\Cache\CacheInterface;
+use ShafeeqKt\LsbConnector\Cache\FileCache;
+use ShafeeqKt\LsbConnector\Http\HttpClient;
+use ShafeeqKt\LsbConnector\Resources\Customers;
+use ShafeeqKt\LsbConnector\Resources\Accounts;
+use ShafeeqKt\LsbConnector\Resources\Entities;
+use ShafeeqKt\LsbConnector\Resources\Transfers;
+use ShafeeqKt\LsbConnector\Resources\Webhooks;
+use ShafeeqKt\LsbConnector\Exceptions\ConfigurationException;
 
 /**
  * LSBX API Client

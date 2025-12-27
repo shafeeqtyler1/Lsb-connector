@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Resources;
+namespace ShafeeqKt\LsbConnector\Resources;
 
-use Shafeeq\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
-use Shafeeq\LsbConnector\DTO\Request\Entity\UpdateEntityRequest;
-use Shafeeq\LsbConnector\DTO\Request\Entity\SearchEntityRequest;
-use Shafeeq\LsbConnector\DTO\Response\Entity;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\CreateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\UpdateEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Entity\SearchEntityRequest;
+use ShafeeqKt\LsbConnector\DTO\Response\Entity;
 
 class Entities extends AbstractResource
 {

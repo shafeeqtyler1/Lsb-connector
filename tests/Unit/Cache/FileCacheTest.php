@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Unit\Cache;
+namespace ShafeeqKt\LsbConnector\Tests\Unit\Cache;
 
-use Shafeeq\LsbConnector\Tests\TestCase;
-use Shafeeq\LsbConnector\Cache\FileCache;
+use ShafeeqKt\LsbConnector\Tests\TestCase;
+use ShafeeqKt\LsbConnector\Cache\FileCache;
 
 class FileCacheTest extends TestCase
 {

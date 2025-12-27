@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector;
+namespace ShafeeqKt\LsbConnector;
 
 class Config
 {

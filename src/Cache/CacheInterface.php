@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Cache;
+namespace ShafeeqKt\LsbConnector\Cache;
 
 /**
  * Simple cache interface compatible with PSR-16

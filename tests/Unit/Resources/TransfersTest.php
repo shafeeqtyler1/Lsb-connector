@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Shafeeq\LsbConnector\Tests\Unit\Resources;
+namespace ShafeeqKt\LsbConnector\Tests\Unit\Resources;
 
-use Shafeeq\LsbConnector\Tests\TestCase;
-use Shafeeq\LsbConnector\Tests\Helpers\MockHttpClient;
-use Shafeeq\LsbConnector\Tests\Helpers\TestDataFactory;
-use Shafeeq\LsbConnector\Resources\Transfers;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CancelAchTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
-use Shafeeq\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
-use Shafeeq\LsbConnector\DTO\Common\Address;
-use Shafeeq\LsbConnector\DTO\Response\Transfer;
+use ShafeeqKt\LsbConnector\Tests\TestCase;
+use ShafeeqKt\LsbConnector\Tests\Helpers\MockHttpClient;
+use ShafeeqKt\LsbConnector\Tests\Helpers\TestDataFactory;
+use ShafeeqKt\LsbConnector\Resources\Transfers;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateAchTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CancelAchTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateBookTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Request\Transfer\CreateWireTransferRequest;
+use ShafeeqKt\LsbConnector\DTO\Common\Address;
+use ShafeeqKt\LsbConnector\DTO\Response\Transfer;
 
 class TransfersTest extends TestCase
 {
