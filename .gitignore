@@ -7,25 +7,40 @@ composer.lock
 # Environment / secrets
 .env
 .env.*
+*.env
 
 # IDEs / Editors
 .idea/
 .vscode/
 *.sublime-project
 *.sublime-workspace
+.project
+.settings/
 
 # OS files
 .DS_Store
 Thumbs.db
+Desktop.ini
+._*
 
 # PHPUnit / Tests
+.phpunit.cache/
 .phpunit.result.cache
+phpunit.xml
 coverage/
-.cache/
+.coverage/
 
 # Logs
 *.log
+logs/
 
 # Temporary files
 *.tmp
 *.bak
+*.swp
+*.swo
+*~
+
+# Cache
+.cache/
+cache/
